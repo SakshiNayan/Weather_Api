@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css"  href="style.css">
+</head>
+<body>
+    <div class="head">
+        <div style="text-align:right"><img src="images.png" alt="logo" class="logo" /></div>
+        <span style="margin-top:40px ;"><h1>Weather Api</h1></span>
+    </div>
+    <div class="container">
+        <div>
+            <form action="/" method="post">
+                <input type="text" name="city" placeholder=" Enter City Name" class="ghost-input"/>
+                <input type="submit" class="ghost-btn" value="Get weather">
+            </form>
+            <div style="margin-top: 80px;">
+                <% if(temp) {%>
+                    <div style="font-size: 2.5vh;">The weather is  <span style="color:rgb(70, 179, 243); font-weight:bolder"><%=temp.weather[0].main%></span> in Nature</div>
+                    <h1> It's <span><%=temp.main.temp%></span> degree Celcius Temperature <span><%=temp.name%></span></h1>
+                <%}%>
+            </div>
+        </div>
+            
+
+
+    </div>
+    
+</body>
+</html>
